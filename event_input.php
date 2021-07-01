@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div>
+            <!-- <div>
                 <h1>カテゴリー*</h1>
                 <select name="event_category">
                     <option value="自然体験">自然体験</option>
@@ -62,9 +62,9 @@
 
             <div>
                 <h1>開催エリア*</h1>
-                開催場所のエリアを選択してください。<br>
-                <!-- 都道府県/市区町村/最寄駅のどのレベルでも設定できます。より細かいエリアを設定したほうが検索されやすくなります。<br> -->
-                <select id="select-pref" name="pref">
+                開催場所のエリアを選択してください。<br> -->
+            <!-- 都道府県/市区町村/最寄駅のどのレベルでも設定できます。より細かいエリアを設定したほうが検索されやすくなります。<br> -->
+            <!-- <select id="select-pref" name="pref">
                     <option value="">都道府県を選択してください</option>
                 </select><br>
                 <select id="select-city" name="city">
@@ -77,7 +77,7 @@
                 <input type="radio" name="remote_or_not" value="あり" checked="checked">あり<br>
                 <input type="radio" name="remote_or_not" value="なし">なし<br>
                 <input type="radio" name="remote_or_not" value="オンライン開催のみ">オンライン開催のみ<br>
-            </div>
+            </div> -->
 
             <div>
                 <h1>参加定員*</h1>
@@ -103,13 +103,13 @@
 
             </div>
 
-            <div>
+            <!-- <div>
                 <h1>予約期限</h1>
                 予約を締め切る時間を設定してください。<br>
                 <input type="date" name="limit_date"><input type="time" name="limit_time">
-                <!-- <input type="radio" name="limit_hour" value="limit_hour" checked="checked">開催日時の12時間以内→開催日時の<input type="number" name="limit_hour_detail" min="1" max="12">時間前<br> -->
-                <!-- <input type="radio" name="limit_date" value="limit_date">開催日の<input type="number" name="limit_date_num" min="1" max="30">日前の<input type="number" name="limit_date_time" min="0" max="24">時<br> -->
-            </div>
+                <input type="radio" name="limit_hour" value="limit_hour" checked="checked">開催日時の12時間以内→開催日時の<input type="number" name="limit_hour_detail" min="1" max="12">時間前<br> -->
+            <!-- <input type="radio" name="limit_date" value="limit_date">開催日の<input type="number" name="limit_date_num" min="1" max="30">日前の<input type="number" name="limit_date_time" min="0" max="24">時<br> -->
+            <!-- </div> -->
 
             <!-- <div>
                 <h1>予約確定期限</h1>
@@ -125,20 +125,13 @@
 
 
             <div>
-                <button>削除</button>
-                <button>保存</button>
-                <button>プレビュー</button>
+                <button>登録</button>
             </div>
-            <div>
-                <button>登録</button>※実装済は登録のみ
-            </div>
-            <div>
-                <button>コピー</button>
-            </div>
+
         </fieldset>
     </form>
 
-    <script>
+    <!-- <script>
         // 参考サイト
         // https://lancers.work/pref-city-form-jquery-json/
         // 都道府県フォーム生成
@@ -164,7 +157,7 @@
                 }
             });
         });
-    </script>
+    </script> -->
 
 
 </body>
