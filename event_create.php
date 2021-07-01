@@ -56,7 +56,7 @@ ini_set('error_reporting', E_ALL);
 if (
     !isset($_POST['event_name']) || $_POST['event_name'] == '' ||
     !isset($_POST['event_detail']) || $_POST['event_detail'] == '' ||
-    !isset($_POST['event_category']) || $_POST['event_category'] == '' ||
+    // !isset($_POST['event_category']) || $_POST['event_category'] == '' ||
     // !isset($_POST['pref']) || $_POST['pref'] == '' || 
     // !isset($_POST['city']) || $_POST['city'] == '' || 
     // !isset($_POST['remote_or_not']) || $_POST['remote_or_not'] == '' || 
@@ -73,15 +73,15 @@ if (
 // データを変数に格納
 $event_name = $_POST['event_name'];
 $event_detail = $_POST['event_detail'];
-$event_category = $_POST['event_category'];
-$pref = $_POST['pref'];
-$city = $_POST['city'];
-$remote_or_not = $_POST['remote_or_not'];
+// $event_category = $_POST['event_category'];
+// $pref = $_POST['pref'];
+// $city = $_POST['city'];
+// $remote_or_not = $_POST['remote_or_not'];
 $how_many = $_POST['how_many'];
 $how_long = $_POST['how_long'];
 $how_much_adult = $_POST['how_much_adult'];
-$limit_date =  $_POST['limit_date'];
-$limit_time = $_POST['limit_time'];
+// $limit_date =  $_POST['limit_date'];
+// $limit_time = $_POST['limit_time'];
 $min_person = $_POST['min_person'];
 
 
@@ -103,19 +103,19 @@ try {
 
 // SQL作成&実行
 $sql = 'INSERT INTO
-event_list(id, event_name, event_detail, event_category, pref, city, remote_or_not, how_many, how_long, how_much_adult, limit_date, limit_time, min_person, created_at, updated_at) VALUES(NULL, :event_name, :event_detail, :event_category, :pref, :city, :remote_or_not, :how_many, :how_long, :how_much_adult, :limit_date, :limit_time, :min_person, sysdate(), sysdate())';
+event_list(id, event_name, event_detail, how_many, how_long, how_much_adult, min_person, created_at, updated_at) VALUES(NULL, :event_name, :event_detail, :how_many, :how_long, :how_much_adult, :min_person, sysdate(), sysdate())';
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':event_name', $event_name, PDO::PARAM_STR);
 $stmt->bindValue(':event_detail', $event_detail, PDO::PARAM_STR);
-$stmt->bindValue(':event_category', $event_category, PDO::PARAM_STR);
-$stmt->bindValue(':pref', $pref, PDO::PARAM_INT);
-$stmt->bindValue(':city', $city, PDO::PARAM_INT);
-$stmt->bindValue(':remote_or_not', $remote_or_not, PDO::PARAM_STR);
+// $stmt->bindValue(':event_category', $event_category, PDO::PARAM_STR);
+// $stmt->bindValue(':pref', $pref, PDO::PARAM_INT);
+// $stmt->bindValue(':city', $city, PDO::PARAM_INT);
+// $stmt->bindValue(':remote_or_not', $remote_or_not, PDO::PARAM_STR);
 $stmt->bindValue(':how_many', $how_many, PDO::PARAM_INT);
 $stmt->bindValue(':how_long', $how_long, PDO::PARAM_INT);
 $stmt->bindValue(':how_much_adult', $how_much_adult, PDO::PARAM_INT);
-$stmt->bindValue(':limit_date', $limit_date, PDO::PARAM_STR);
-$stmt->bindValue(':limit_time', $limit_time, PDO::PARAM_INT);
+// $stmt->bindValue(':limit_date', $limit_date, PDO::PARAM_STR);
+// $stmt->bindValue(':limit_time', $limit_time, PDO::PARAM_INT);
 $stmt->bindValue(':min_person', $min_person, PDO::PARAM_INT);
 $status = $stmt->execute(); // SQLを実行
 // exit('ok');
