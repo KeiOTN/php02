@@ -39,15 +39,15 @@ if ($status == false) {
         $output .= "<div class='event_each'>";
         $output .= "<h1>{$record["event_name"]}</h1>";
         $output .= "<p>{$record["event_detail"]}</p><br>";
-        $output .= "<p>カテゴリー:{$record["event_category"]}</p>";
-        $output .= "<p>開催地:{$record["pref"]}</p>";
-        $output .= "<p>{$record["city"]}</p>";
-        $output .= "<p>オンライン:{$record["remote_or_not"]}</p>";
+        // $output .= "<p>カテゴリー:{$record["event_category"]}</p>";
+        // $output .= "<p>開催地:{$record["pref"]}</p>";
+        // $output .= "<p>{$record["city"]}</p>";
+        // $output .= "<p>オンライン:{$record["remote_or_not"]}</p>";
         $output .= "<p>募集人数:{$record["how_many"]}人</p>";
         $output .= "<p>所要時間:{$record["how_long"]}時間</p>";
         $output .= "<p>料金(大人):{$record["how_much_adult"]}円</p>";
-        $output .= "<p>申込期限:{$record["limit_date"]}</p>";
-        $output .= "<p>{$record["limit_time"]}</p>";
+        // $output .= "<p>申込期限:{$record["limit_date"]}</p>";
+        // $output .= "<p>{$record["limit_time"]}</p>";
         $output .= "<p>最小遂行人数:{$record["min_person"]}</p>";
         $output .= "<button>この体験に申し込む</button>";
         $output .= "</div>";
@@ -104,7 +104,8 @@ if ($status == false) {
                 <div class="nav-item"><a href="#about">TABITOTOとは</a></div>
                 <div class="nav-item"><a href="#news">ホスト一覧</a></div>
                 <div class="nav-item"><a href="#contact">CONTACT</a></div>
-                <div class="nav-item"><a href="#access">イベントを企画する</a></div>
+                <div class="nav-item"><a href="event_input.php">イベントを企画する</a></div>
+                <div class="nav-item"><a href="event_read.php">イベント管理画面</a></div>
             </div> <!-- class="nav_buttom_box" END -->
             </div><!-- class="nav_content" END -->
         </nav>
